@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>std.frag</file>
+        <file>std.geom</file>
+        <file>std.vert</file>
+    </qresource>
+</RCC>

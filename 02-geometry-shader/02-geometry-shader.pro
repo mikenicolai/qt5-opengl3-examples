@@ -12,9 +12,10 @@ HEADERS  += \
             glwidget.h
 
 OTHER_FILES +=  \
-                simple.vert \
-                simple.frag
+                std.vert \
+                std.frag \
+                std.geom
 
 RESOURCES +=    \
-                core-profile.qrc
+                geometry-shader.qrc
 

@@ -31,7 +31,7 @@ void GLWidget::initializeGL()
     glClearColor( 0.0f, 0.0f, 0.0f, 1.0f );
 
     // Prepare a complete shader program...
-    if ( !prepareShaderProgram( ":/simple.vert", ":/simple.frag" ) )
+    if ( !prepareShaderProgram( ":/std.vert", ":/std.frag" ) )
         return;
 
     // we need a VAO in core!
