@@ -1,7 +1,7 @@
 #version 150
 /* std.frag -  simple fragment shader */
 
-in vec4 vertexColor;
+in vec4 geomColor;
 out vec4 fragColor;
 
 // entry point
@@ -9,6 +9,6 @@ out vec4 fragColor;
 void main( void )
 {
 	// pass through interpolated vertex color.
-        fragColor = vertexColor;
+        fragColor = geomColor;
 
 }

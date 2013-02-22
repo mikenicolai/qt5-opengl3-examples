@@ -31,7 +31,7 @@ void GLWidget::initializeGL()
     glClearColor( 0.0f, 0.0f, 0.0f, 1.0f );
 
     // Prepare a complete shader program...
-    if ( !prepareShaderProgram( ":/std.vert", ":/std.frag" ) )
+    if ( !prepareShaderProgram( ":/std.vert", ":/std.geom",":/std.frag" ) )
         return;
 
     // we need a VAO in core!
@@ -97,12 +97,21 @@ void GLWidget::keyPressEvent( QKeyEvent* e )
 }
 
 bool GLWidget::prepareShaderProgram( const QString& vertexShaderPath,
-                                     const QString& fragmentShaderPath )
+                                     const QString& geometryShaderPath,
+                                     const QString& fragmentShaderPath
+                                     )
 {
     // First we load and compile the vertex shader...
     bool result = m_shader.addShaderFromSourceFile( QOpenGLShader::Vertex, vertexShaderPath );
     if ( !result )
         qWarning() << m_shader.log();
+
+
+    result = m_shader.addShaderFromSourceFile( QOpenGLShader::Geometry, geometryShaderPath );
+    if ( !result )
+        qWarning() << m_shader.log();
+
+
 
     // ...now the fragment shader...
     result = m_shader.addShaderFromSourceFile( QOpenGLShader::Fragment, fragmentShaderPath );

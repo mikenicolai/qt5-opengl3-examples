@@ -21,6 +21,7 @@ protected:
 
 private:
     bool prepareShaderProgram( const QString& vertexShaderPath,
+                               const QString& geometryShaderPath,
                                const QString& fragmentShaderPath );
 
     QOpenGLShaderProgram m_shader;

@@ -3,15 +3,12 @@
 
 in vec4 vertex;
 
-out vec4 vertexColor;
+out vec4 vertColor;
 
 
-//
-// entry point
-//
+
 void main( void )
 {
- vertexColor= vec4( 1.0, 0.0, 0.0, 1.0 );
+ vertColor= vec4( 1.0, 0.0, 0.0, 1.0 );
  gl_Position = vertex;
-
 }
