@@ -1,7 +1,7 @@
 
 QT       += core gui opengl
 
-TARGET = 07-core-profile
+TARGET = 02-geometry-shader
 TEMPLATE = app
 
 SOURCES +=  \
